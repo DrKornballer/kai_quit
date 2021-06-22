@@ -1,0 +1,51 @@
+<?php
+$host="localhost";
+$port=3306;
+$socket="";
+$user="pi";
+$password="@Pookie85";
+$dbname="cost_pack";
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error()); 
+
+?>
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+		<title>PACK</title>
+	</head>
+	<body>
+		<div class = "welcome">
+			<p>
+			<h1> WELCOME KEVIN!!</h1>
+			<h2> CIGGARETTE TRACKER 2021</h2>
+			<div id="button_container">
+		<form action="index.html">
+        	<button type="submit">HOME</button>
+    		</form>
+</p>
+</div>
+<div>
+<p>	
+<form action="configure.php" method="post">
+	<input type="datetime-local" id=dt name="datetime"> 
+	<label for="dt">DATE/TIME</label>
+	<br />
+	<input type="currency" min="0.01" step="0.01" max="2500" placeholder="Cost of Pack" name="pack_cost">
+	<input type="submit">
+</form>
+</p>
+	
+</div>
+</body>
+
+		<footer>
+			<p>
+		@KORN KREATES 2021
+	</p>
+	</footer>
+</html>
